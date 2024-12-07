@@ -40,16 +40,12 @@ Tabs.Main:AddButton({ Title = "Infinite Jump", Callback = function()
     loadstring(game:HttpGet("https://pastebin.com/raw/9Pbf0K3f"))()
 end })
         --Principal
-Tabs.Main:AddButton({ Title = "Comandos Admin - Infinit Yield", Callback = function() 
+Tabs.Main:AddButton({ Title = "Comandos Admin - Infinite Yield", Callback = function() 
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
 end })
 
 Tabs.Main:AddButton({ Title = "Raio Hub V4 - Ilha Bela", Callback = function() 
     loadstring(game:HttpGet("https://raw.githubusercontent.com/AntLeak/a/refs/heads/main/BIB%20Hub"))()
-end })
-
-Tabs.Main:AddButton({ Title = "Auto rota - Ilha Bela", Callback = function()
-    loadstring(game:HttpGet('https://pastebin.com/raw/risZqXfu'))()
 end })
 
 Tabs.Main:AddButton({ Title = "Fazer arma rapido - Ilha Bela", Callback = function()
