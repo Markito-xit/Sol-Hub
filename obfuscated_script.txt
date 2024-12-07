@@ -5,7 +5,7 @@ local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/
 
 --Criar Janela
 local Window = Fluent:CreateWindow({
-    Title = "Sol HUB - Ilha Bela " .. Fluent.Version,
+    Title = "Sol HUB" .. Fluent.Version,
     SubTitle = "By Markito",
     TabWidth = 160, Size = UDim2.fromOffset(580, 460), Theme = "Dark", MinimizeKey = Enum.KeyCode.LeftControl
 })
