@@ -3,7 +3,7 @@ local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/
 
 --Criar Janela
 local Window = Fluent:CreateWindow({
-    Title = "Sol HUB" .. Fluent.Version,
+    Title = "Sol HUB " .. Fluent.Version,
     SubTitle = "By Markito",
     TabWidth = 160, Size = UDim2.fromOffset(580, 460), Theme = "Dark", MinimizeKey = Enum.KeyCode.LeftControl
 })
@@ -16,7 +16,7 @@ local Tabs = {
 }
 
 --Paragrafos
-Tabs.Main:AddParagraph({ Title = "Script - ilha bela", Content = "By markito" })
+Tabs.Main:AddParagraph({ Title = "Sol Hub", Content = "By markito" })
 
 --Butoes
 
