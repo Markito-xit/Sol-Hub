@@ -1,5 +1,3 @@
---Sol Hub Backup
-
 --Carregar Blioteca
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 
@@ -12,10 +10,9 @@ local Window = Fluent:CreateWindow({
 
 --Abas
 local Tabs = {
-    Main = Window:AddTab({ Title = "Princial" }),
+    Main = Window:AddTab({ Title = "Outros Menus" }),
     Eb = Window:AddTab({ Title = "Script para - EB" }),
-    PVP = Window:AddTab({ Title = "Pvp" }),
-    Settings = Window:AddTab({ Title = "Config", Icon = "config" })
+    PVP = Window:AddTab({ Title = "Pvp" })
 }
 
 --Paragrafos
