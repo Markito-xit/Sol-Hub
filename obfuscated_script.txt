@@ -36,6 +36,9 @@ Tabs.Eb:AddButton({ Title = "Auto Torre", Callback = function()
     loadstring(game:HttpGet("https://pastebin.com/raw/pSi3vkHE"))()
 end })
 
+Tabs.Main:AddButton({ Title = "Infinite Jump", Callback = function() 
+    loadstring(game:HttpGet("https://pastebin.com/raw/9Pbf0K3f"))()
+end })
         --Principal
 Tabs.Main:AddButton({ Title = "Comandos Admin - Infinit Yield", Callback = function() 
     loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
