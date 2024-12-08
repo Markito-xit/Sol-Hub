@@ -48,7 +48,7 @@ Tabs.Main:AddButton({ Title = "Raio Hub V4 - Ilha Bela", Callback = function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/AntLeak/a/refs/heads/main/BIB%20Hub"))()
 end })
 
-Tabs.Main:AddButton({ Title = "Fazer arma rapido - Ilha Bela", Callback = function()
+Tabs.Main:AddButton({ Title = "Deixar proximity prompt rápido", Callback = function()
 	for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
    	 if v:IsA("ProximityPrompt") then
     	    v["HoldDuration"] = 0
