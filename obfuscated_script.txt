@@ -68,7 +68,3 @@ end })
 Tabs.Main:AddButton({ Title = "Pedrozx Menu - Menu para roleplay", Callback = function()
     loadstring(game:HttpGet('https://dpaste.com/C7F2DSP8R.txt'))()
 end })
-
-Tabs.Main:AddButton({ Title = " *E* = Invisble Bind", Callback = function() 
-	https://raw.githubusercontent.com/Markito-xit/Invisible/refs/heads/main/invisble.txt
-end })
