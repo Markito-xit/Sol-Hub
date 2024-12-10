@@ -1,70 +1,71 @@
+--Teste
 --Carregar Blioteca
-local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+	local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 
 --Criar Janela
-local Window = Fluent:CreateWindow({
+	local Window = Fluent:CreateWindow({
     Title = "Sol HUB " .. Fluent.Version,
     SubTitle = "By Markito",
-    TabWidth = 160, Size = UDim2.fromOffset(580, 460), Theme = "Dark", MinimizeKey = Enum.KeyCode.LeftControl
-})
+    TabWidth = 160, Size = UDim2.fromOffset(580, 460), Theme = "Dark", MinimizeKey = Enum.KeyCode.LeftAlt
+	})
 
 --Abas
-local Tabs = {
-    Main = Window:AddTab({ Title = "Outros Menus" }),
-    Eb = Window:AddTab({ Title = "Script para - EB" }),
-    PVP = Window:AddTab({ Title = "Pvp" })
-}
+	local Tabs = {
+		Roleplay = Window:AddTab({ Title = "Roleplay" }),
+		BIB = Window:AddTab({ Title = "Ilha Bela" }),
+		Pvp = Window:AddTab({ Title = "PVP"}),
+		Eb = Window:AddTab({ Title = "EB" }),
+		Staff = Window:AddTab({ Title = "Comandos Staff" })
+	}
 
 --Paragrafos
-Tabs.Main:AddParagraph({ Title = "Sol Hub", Content = "By markito" })
-
+	--Tabs.Roleplay:AddParagraph({ Title = "Script é para roleplat", Content = "By markito" }),
 --Butoes
 
+--Roleplay
+	Tabs.Roleplay:AddButton({ Title = "Infinite Jump", Callback = function() 
+		loadstring(game:HttpGet("https://pastebin.com/raw/9Pbf0K3f"))()
+		end })
+	Tabs.Roleplay:AddButton({ Title = "Pedrozx Menu - Menu para roleplay", Callback = function()
+		loadstring(game:HttpGet('https://dpaste.com/C7F2DSP8R.txt'))()
+		end })
+--EB
+	Tabs.Eb:AddButton({ Title = "Auto JJs [z] ", Callback = function() 
+		local Options = {
+    		Keybind = 'z',
+    		Tempo = 0.75, 
+   			Language = 'pt-br',
+    		Rainbow = true,
+		};
+		loadstring(game:HttpGet('https://raw.githubusercontent.com/Zv-yz/AutoJJs/main/Main.lua'))(Options);
+		end })
 
-	--Eb
-Tabs.Eb:AddButton({ Title = "Auto JJs [z] ", Callback = function() 
-	local Options = {
-    	Keybind = 'z',
-    	Tempo = 0.75, 
-   	Language = 'pt-br',
-    	Rainbow = true,
-	};
-	loadstring(game:HttpGet('https://raw.githubusercontent.com/Zv-yz/AutoJJs/main/Main.lua'))(Options);
-end })
+	Tabs.Eb:AddButton({ Title = "Auto Torre", Callback = function() 
+    	loadstring(game:HttpGet("https://pastebin.com/raw/pSi3vkHE"))()
+		end })
+--Staff
+	Tabs.Staff:AddButton({ Title = "Comandos Admin - Infinite Yield", Callback = function() 
+    	loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+		end })
 
-Tabs.Eb:AddButton({ Title = "Auto Torre", Callback = function() 
-    loadstring(game:HttpGet("https://pastebin.com/raw/pSi3vkHE"))()
-end })
-
-Tabs.Main:AddButton({ Title = "Infinite Jump", Callback = function() 
-    loadstring(game:HttpGet("https://pastebin.com/raw/9Pbf0K3f"))()
-end })
-        --Principal
-Tabs.Main:AddButton({ Title = "Comandos Admin - Infinite Yield", Callback = function() 
-    loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
-end })
-
-Tabs.Main:AddButton({ Title = "Raio Hub V4 - Ilha Bela", Callback = function() 
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/AntLeak/a/refs/heads/main/BIB%20Hub"))()
-end })
-
-Tabs.Main:AddButton({ Title = "Deixar proximity prompt rápido", Callback = function()
-	for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
+--BIB
+	Tabs.BIB:AddButton({ Title = "Raio Hub V4", Callback = function() 
+    	loadstring(game:HttpGet("https://raw.githubusercontent.com/AntLeak/a/refs/heads/main/BIB%20Hub"))()
+		end })
+	Tabs.BIB:AddButton({ Title = "Deixar proximity prompt rápido", Callback = function()
+		for i,v in pairs(game:GetService("Workspace"):GetDescendants()) do
    	 if v:IsA("ProximityPrompt") then
     	    v["HoldDuration"] = 0
     	end
-	end
+		end
 
 
-	game:GetService("ProximityPromptService").PromptButtonHoldBegan:Connect(function(v)
-  	  v["HoldDuration"] = 0
-	end)
-	end })
+		game:GetService("ProximityPromptService").PromptButtonHoldBegan:Connect(function(v)
+  		  v["HoldDuration"] = 0
+		end)
+		end })
 
-Tabs.PVP:AddButton({ Title = "Aimbot", Callback = function()
-    loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-universal-aimbot-pc-only-21173"))()
-end })
-
-Tabs.Main:AddButton({ Title = "Pedrozx Menu - Menu para roleplay", Callback = function()
-    loadstring(game:HttpGet('https://dpaste.com/C7F2DSP8R.txt'))()
-end })
+--PVP
+	Tabs.Pvp:AddButton({ Title = "Aimbot", Callback = function()
+    	loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-universal-aimbot-pc-only-21173"))()
+		end })
