@@ -15,6 +15,7 @@
 		BIB = Window:AddTab({ Title = "Ilha Bela" }),
 		Pvp = Window:AddTab({ Title = "PVP"}),
 		Eb = Window:AddTab({ Title = "EB" }),
+		Rivais = Window:AddTab({ Title = "Rivais" }),
 		Staff = Window:AddTab({ Title = "Comandos Staff" })
 	}
 
@@ -63,6 +64,10 @@
 		game:GetService("ProximityPromptService").PromptButtonHoldBegan:Connect(function(v)
   		  v["HoldDuration"] = 0
 		end)
+		end })
+--Rivais
+	Tabs.Rivais:AddButton({ Title = "Rivais 1", Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/Sheeshablee73/Scriptss/main/Rivals%20Latest.lua",true))()
 		end })
 
 --PVP
