@@ -16,6 +16,7 @@
 		Pvp = Window:AddTab({ Title = "PVP"}),
 		Eb = Window:AddTab({ Title = "EB" }),
 		Rivais = Window:AddTab({ Title = "Rivais" }),
+		Brookhaven = Window:AddTab({ Title = "Brookhaven" }),
 		Staff = Window:AddTab({ Title = "Comandos Staff" })
 	}
 
@@ -29,6 +30,10 @@
 		end })
 	Tabs.Roleplay:AddButton({ Title = "Pedrozx Menu - Menu para roleplay", Callback = function()
 		loadstring(game:HttpGet('https://dpaste.com/C7F2DSP8R.txt'))()
+		end })
+--Brookhaven
+	Tabs.Brookhaven:AddButton({ Title = "Sander 4.2.2", Callback = function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/kigredns/SanderXV4.2.2/refs/heads/main/NormalSS.lua",true))()
 		end })
 --EB
 	Tabs.Eb:AddButton({ Title = "Auto JJs [z] ", Callback = function() 
